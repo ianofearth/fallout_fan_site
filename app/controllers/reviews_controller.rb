@@ -4,6 +4,11 @@ class ReviewsController < ApplicationController
     @review = @game.reviews.new
   end
 
+  def show
+    @game = Game.find(params[:game_id])
+    @review = Review.find(params[:id])
+  end
+
   def create
     @game = Game.find(params[:game_id])
     @review = @game.reviews.new(review_params)
@@ -14,6 +19,7 @@ class ReviewsController < ApplicationController
       render :new
     end
   end
+
 
 private
   def review_params

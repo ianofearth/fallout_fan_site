@@ -3,4 +3,7 @@ class Review < ActiveRecord::Base
   validates :opinion, :presence => true
   validates :rating, :presence => true
   belongs_to :game
+
+
+
 end
