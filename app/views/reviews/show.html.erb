@@ -1,2 +1,7 @@
-<h1><%= @review.name %> rated <%= @game.title %> <%= @review.rating %>/10</h1>
-<h4><%= @review.opinion %></h4>
+<h1><%= @review.name %> rated <%= @game.title %> a <%= @review.rating %>/10</h1>
+<h4>And had this to say about it: <%= @review.opinion %></h4>
+
+<p><%= link_to "Edit " + @review.name + "'s review", edit_game_review_path(@game, @review) %></p>
+<p><%= link_to "Delete", game_review_path(@game, @review),
+              :data => {:confirm => "Are you sure?",
+                :method => 'delete'} %></p>
