@@ -5,3 +5,5 @@
 <p><%= link_to "Delete", game_review_path(@game, @review),
               :data => {:confirm => "Are you sure?",
                 :method => 'delete'} %></p>
+
+<%= link_to "Back to " + @game.title + ' reviews', game_path(@game) %>

@@ -8,6 +8,9 @@
 </head>
 <body>
   <%= link_to 'Home', games_path %>
+  <br>
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>
 <%= yield %>
 
 </body>
